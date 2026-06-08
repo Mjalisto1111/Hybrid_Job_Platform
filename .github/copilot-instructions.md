@@ -1,0 +1,3 @@
+- Scaffold a React + Vite hybrid micro-work prototype.
+- Include core UI for job type selection, task marketplace, wallet summary, and job matching.
+- Keep project minimal and ready for `npm install` and `npm run dev`.
