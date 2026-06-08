@@ -13,4 +13,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["gunicorn", "backend.app:app", "--bind", "0.0.0.0:5000", "--workers", "2"]
+# Use Render's $PORT and eventlet worker for WebSocket support
+CMD ["gunicorn", "-k", "eventlet", "backend.app:app", "--bind", "0.0.0.0:$PORT", "--workers", "1"]
